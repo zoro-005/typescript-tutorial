@@ -22,10 +22,18 @@
 //     return income * 1.3
 // }
 // calculateTax(50_000, 2025);
-
-let employee: {
-    readonly id: number,
-    emp_name: string,
-    retire: (date: Date) => void
-} = {id: 1, emp_name : "noob", retire: (date: Date) => {console.log(date)}};
-employee.emp_name = "pro"
+// type Employee = {
+//     readonly id: number,
+//     emp_name: string,
+//     retire: (date: Date) => void
+// }
+// let employee: Employee = {id: 1, emp_name : "noob", retire: (date: Date) => {console.log(date)}};
+// employee.emp_name = "pro"
+function kgToLbs(weight: number | string): number {
+    if (typeof weight === 'number')
+        return weight * 2.2;
+    else
+        return parseInt(weight) * 2.2;
+}
+console.log(kgToLbs(10));
+console.log(kgToLbs('10kg'));
